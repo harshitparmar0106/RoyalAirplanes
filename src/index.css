@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import 'tailwindcss';
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.logo-text > p{
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.logo-text > span {
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
