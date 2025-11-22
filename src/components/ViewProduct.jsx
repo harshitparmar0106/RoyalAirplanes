@@ -98,7 +98,7 @@ const ViewProduct = () => {
           </p>
 
           <p className="text-white px-4 py-2 text-lg leading-relaxed bg-linear-to-r from-cyan-400 to-blue-400 rounded-2xl mb-6">
-            If you want to purchase any Modals from our collection, please mail
+            If you want to purchase any Models from our collection, please mail
             us on{" "}
             <span className="text-blue-800">royalairplanes@gmail.com</span>
             <br />

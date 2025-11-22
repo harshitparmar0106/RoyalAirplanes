@@ -10,11 +10,13 @@ import ViewProduct from "./components/ViewProduct";
 import Footer from './components/Footer';
 import { Routes,Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   return (
     <div className="bg-linear-to-br from-white via-blue-50 to-blue-200 min-h-screen font-sans relative">
       <ScrollToTop />
+      <Analytics/>
       <Navbar />
       <Routes>
      
