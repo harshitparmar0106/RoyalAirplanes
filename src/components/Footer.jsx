@@ -60,7 +60,7 @@ const Footer = () => {
                 royalairplanes@gmail.com
               </a>
             </li>
-            <li className="flex items-start gap-3">
+            {/* <li className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-cyan-400 mt-1" />
               <p className="text-slate-400 text-sm leading-relaxed">
                 Royal Airplanes Pvt. Ltd.
@@ -69,7 +69,7 @@ const Footer = () => {
                 <br />
                 Jaipur, Rajasthan, India – 302004
               </p>
-            </li>
+            </li> */}
           </ul>
         </div>
 
