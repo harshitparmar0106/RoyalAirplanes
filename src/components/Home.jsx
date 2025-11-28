@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import Navbar from "./Navbar.jsx";
 import Products from "../pages/Products.jsx";
-
+import { sliderImages } from "../assets/data.js";
 
 export default function Home() {
   useEffect(() => {
@@ -40,6 +40,17 @@ export default function Home() {
   const [showContact, setShowContact] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === sliderImages.length - 1 ? 0 : prev + 1
+      );
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const filteredProducts = products.filter((p) => {
     const matchesCategory =
@@ -66,8 +77,18 @@ export default function Home() {
             <NavLink to="/planes">View Collection</NavLink>
           </button>
         </div>
-        <div className="flex-1 flex justify-center items-center rounded-3xl bg-white/30 backdrop-blur-lg shadow-lg w-[320px] h-[320px]">
-            <img src={HomeImg} alt="Featured Airplane" className="w-full h-full object-contain" />
+        <div className="flex-1 flex justify-center items-center rounded-4xl bg-white/30 backdrop-blur-lg shadow-lg w-[320px] h-86">
+          {sliderImages.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt="Plane"
+              className={`
+          absolute inset-0 w-full h-full object-cover transition-opacity duration-700 rounded-2xl
+          ${index === currentIndex ? "opacity-100" : "opacity-0"}
+        `}
+            />
+          ))}
         </div>
       </section>
 
@@ -90,7 +111,6 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 max-w-6xl w-full px-4 py-4">
-
           {/* Products Grid */}
           <div className="flex-1 ">
             {filteredProducts.length > 0 ? (

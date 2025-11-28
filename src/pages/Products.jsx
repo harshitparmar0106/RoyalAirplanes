@@ -80,7 +80,7 @@ const Products = ({ setProduct }) => {
               </div>
 
               <div className="flex flex-col gap-3">
-                {["all", "airplane", "helicopter", "jet", "glider"].map(
+                {["all", "airplane", "helicopter", "jet", "glider","accessories"].map(
                   (planes) => (
                     <button
                       key={planes}

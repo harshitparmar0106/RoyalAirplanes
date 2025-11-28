@@ -31,6 +31,11 @@ import wrightbrthrs from "../assets/WrightBrthrs.webp";
 import spitfire from "../assets/SpitfireMK_IX.jpg";
 import pendora1 from "../assets/FT30121P-1.webp";
 import pendora2 from "../assets/FreewingPendora.jpeg";
+import Aircraftstand1 from "../assets/AircraftStand.png";
+import AircraftStand2 from "../assets/AircraftStand2.jpg";
+import matrix from "../assets/matrix.png";
+import ars300 from "../assets/ARS300.jpeg";
+import scorpion from "../assets/ScorpionV2.webp";
 
 
 
@@ -380,7 +385,7 @@ export const products = [
   },
   {
     id: 14,
-    name: "Freewing Pandora 4-in-1 Red 1400mm PNP",
+    name: "Pandora 4-in-1 Red 1400mm PNP",
     image: [pendora1, pendora2],
     category: "airplane",
     price:29999,
@@ -394,6 +399,20 @@ export const products = [
       motor: "Brushless 3536-800Kv",
       esc: "30A with Internal BEC, XT60 Connector",
       propeller: "11x6 3-blade",
+    },
+  },
+  {
+    id: 15,
+    name: "LightWeight Foam Aircraft Stand",
+    image: [Aircraftstand1, AircraftStand2],
+    category: "accessories",
+    price:3999,
+    specs: {
+      material: "High-Density Foam",
+      length: "580mm",
+      width: "300mm",
+      height: "355mm",
+      weight_capacity: "530g",
     },
   },
 ];
@@ -439,4 +458,12 @@ export const galleryData = [
     image:
       "https://warwingsdaily.com/wp-content/uploads/2024/01/Surya-Kiran-1024x676.jpg",
   },
+];
+
+export const sliderImages = [
+  scorpion,
+  ars300,
+  fmsEDF90,
+  fms1700SuperClub,
+  xflyImg
 ];
