@@ -1,113 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- =======================
-        Search Engine SEO
-    ======================== -->
-    <title>Royal Airplanes – Premium RC Planes, Helicopters, Drones & Accessories</title>
-    <meta name="description" content="Shop the latest RC airplanes, helicopters, and drones at Royal Airplanes. High-quality, modern, durable and performance-built aircraft for beginners and professionals." />
-    <meta name="keywords" content="RC planes, Royal airplanes, RC helicopters, drones, remote control aircraft, buy RC plane India, RC jet, model aviation" />
-    <meta name="author" content="Royal Airplanes" />
-    <meta name="robots" content="index, follow" />
+  <!-- Primary SEO -->
+  <title>Royal Airplanes – Premium RC Planes, Helicopters, Drones & Accessories</title>
+  <meta name="description" content="Shop premium RC airplanes, helicopters, drones and accessories at Royal Airplanes — high performance, durable and beginner-friendly models with fast shipping across India." />
+  <!-- keywords are ignored by modern search engines; kept for legacy only -->
+  <meta name="keywords" content="RC planes, RC helicopters, drones, remote control aircraft, Royal Airplanes, buy RC plane India" />
+  <meta name="author" content="Royal Airplanes" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://royalairplanes.com/" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://royalairplanes.com/" />
+  <!-- Mobile / Theme -->
+  <meta name="theme-color" content="#111111" />
+  <link rel="manifest" href="/manifest.json" />
 
-    <!-- =======================
-        Open Graph (Social)
-    ======================== -->
-    <meta property="og:title" content="Royal Airplanes – Premium RC Aircraft & Helicopters" />
-    <meta property="og:description" content="Explore a wide range of RC airplanes, helicopters, jets and drones with advanced performance and affordable pricing." />
-    <meta property="og:image" content="/logo.svg" />
-    <meta property="og:url" content="https://royalairplanes.com/" />
-    <meta property="og:type" content="website" />
+  <!-- Open Graph (Social sharing - use a full-size preview image 1200x630) -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Royal Airplanes – Premium RC Aircraft & Helicopters" />
+  <meta property="og:description" content="Explore a wide range of RC airplanes, helicopters, jets and drones — advanced performance at affordable prices." />
+  <meta property="og:image" content="https://royalairplanes.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://royalairplanes.com/" />
 
-    <!-- =======================
-        Twitter Card
-    ======================== -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Royal Airplanes – Best RC Aircraft Store" />
-    <meta name="twitter:description" content="Premium RC planes & helicopters with modern designs and unbeatable performance." />
-    <meta name="twitter:image" content="/logo.svg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@royalairplanes" />
+  <meta name="twitter:title" content="Royal Airplanes – Best RC Aircraft Store" />
+  <meta name="twitter:description" content="Premium RC planes & helicopters with modern designs and unbeatable performance." />
+  <meta name="twitter:image" content="https://royalairplanes.com/og-image.jpg" />
 
-    <!-- =======================
-        Favicon
-    ======================== -->
-    <link rel="icon" type="image/png" href="/logo.svg" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="alternate icon" href="/logo.svg" />
 
-    <!-- =======================
-        Schema.org – Rich Results
-    ======================== -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Store",
+  <!-- Preconnect / Preload (improves LCP) -->
+  <!-- Preconnect example if you use Google Fonts or CDN (uncomment if used)
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  -->
+  <!-- <link rel="preload" as="image" href="/banner.jpg">
+  <link rel="preload" as="image" href="/og-image.jpg"> -->
+
+  <!-- Structured data (Organization + Store) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://royalairplanes.com/#org",
         "name": "Royal Airplanes",
         "url": "https://royalairplanes.com",
-        "image": "https://royalairplanes.com/og-image.jpg",
-        "description": "Premium RC planes, helicopters and drones for beginners and advanced pilots.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "IN"
-        },
+        "logo": "https://royalairplanes.com/logo.svg",
         "sameAs": [
-            "https://facebook.com/royalairplanes",
-            "https://instagram.com/royalairplanes"
+          "https://www.facebook.com/royalairplanes",
+          "https://www.instagram.com/royalairplanes"
         ]
+      },
+      {
+        "@type": "Store",
+        "@id": "https://royalairplanes.com/#store",
+        "name": "Royal Airplanes",
+        "description": "Premium RC planes, helicopters and drones for beginners and advanced pilots.",
+        "url": "https://royalairplanes.com",
+        "image": "https://royalairplanes.com/logo.svg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "telephone": "+91-XXXXXXXXXX"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Critical Inline Styles (small) -->
+  <style>
+    :root { --bg:#f4f4f4; --text:#222; --accent:#111; }
+    html,body{height:100%}
+    body {
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
     }
-    </script>
-
-    <!-- =======================
-        Styles
-    ======================== -->
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #222;
-        }
-        header {
-            background: #111;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .hero {
-            padding: 80px 20px;
-            text-align: center;
-            background: url('/banner.jpg') center/cover no-repeat;
-            color: white;
-        }
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-        }
-    </style>
-
+    header{background:var(--accent);color:#fff;padding:20px;text-align:center}
+    .hero { padding:80px 20px; text-align:center; background:url('/banner.jpg') center/cover no-repeat; color:white; }
+    .container{max-width:1100px;margin:auto;padding:20px}
+    /* Accessible focus outline */
+    a:focus { outline:3px solid #ffd54f; outline-offset:3px; }
+  </style>
 </head>
 
 <body>
-    <header>
-        <h1>Royal Airplanes</h1>
-        <p>Premium RC Aircraft | Helicopters | Drones | Accessories</p>
-    </header>
+  <header>
+    <h1>Royal Airplanes</h1>
+    <p>Premium RC Aircraft — Planes • Helicopters • Drones • Accessories</p>
+  </header>
 
-    <section class="hero">
-        <h2>Experience Next-Level RC Flying</h2>
-        <p>Modern, durable and high-performance flying machines crafted for all skill levels.</p>
-    </section>
+  <section class="hero" role="region" aria-label="Hero - Royal Airplanes">
+    <h2>Experience Next-Level RC Flying</h2>
+    <p>Modern, durable and high-performance flying machines crafted for all skill levels.</p>
+  </section>
 
-    <div class="container">
-        <h2>Welcome to Royal Airplanes</h2>
-        <p>Your trusted destination for advanced RC planes and helicopters. Explore top-grade, affordable and high-quality aircraft designed for enthusiasts and professionals.</p>
-        <p>Browse our full collection on the website.</p>
+  <main class="container" role="main">
+    <h2>Welcome to Royal Airplanes</h2>
+    <p>Your trusted destination for advanced RC planes and helicopters. Explore top-grade, affordable and high-quality aircraft designed for enthusiasts and professionals.</p>
+    <p>Browse our full collection on the website.</p>
+    <!-- Example image - use alt text and lazy loading on inline <img> -->
+    <img src="../src/assets/Arrows_1300mm_2.webp" alt="Royal Airplanes premium RC plane" width="1200" height="800" loading="lazy">
+  </main>
+
+  <!-- noscript fallback for bots / users without JS (important for SEO) -->
+  <noscript>
+    <div style="padding:20px;background:#fff;border-top:4px solid #111;">
+      <h3>Royal Airplanes</h3>
+      <p>We recommend using a modern browser with JavaScript enabled for the best experience. If you cannot, contact us at +91-XXXXXXXXXX.</p>
     </div>
+  </noscript>
 </body>
-
 </html>
