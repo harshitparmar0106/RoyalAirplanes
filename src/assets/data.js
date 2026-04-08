@@ -46,7 +46,7 @@ export const products = [
     name: "RC ERA C129 V2 4CH RC Helicopter with Altitude Hold, 6-Axis Gyro & 3D Flip",
     image: [rcEraC129V2Img, rcEraC129V2Img2],
     category: "helicopter",
-    price: 10999, // add price if known
+    price: 11999, // add price if known
     specs: {
       rotorDiameter: "248mm",
       bodyLength: "267mm",
@@ -67,7 +67,7 @@ export const products = [
     name: "FMS 1220mm Ranger V3 EP PNP RC Plane with Reflex V3(Red/Green/Yellow selectable)",
     image: [fmsRangerGreenImg, fmsRangerRedImg, fmsRangerYellowImg],
     category: "airplane",
-    price: 21999, // add price if known
+    price: 24999, // add price if known
     specs: {
       wingspan: "1220mm / 48in",
       overallLength: "947mm / 37.3in",
@@ -117,7 +117,7 @@ export const products = [
     name: "FMS 1700mm PA-18 Super Club V2 RTF/PNP",
     image: [fms1700SuperClub, fms1700SuperClubWater],
     category: "airplane",
-    price: 36999, // add price if known
+    price: 40999, // add price if known
     specs: {
       wingspan: "1700mm / 66.9in",
       overallLength: "1136mm / 44.7in",
@@ -170,7 +170,7 @@ export const products = [
     name: "FMS 2300mm FOX V2 Glider PNP",
     image: [fmsFoxGlider, fmsFoxGlider2],
     category: "glider",
-    price: 29999, // add price if known
+    price: 31999, // add price if known
     specs: {
       wingspan: "2300mm / 91.4in",
       overallLength: "1290mm / 50.8in",
@@ -187,7 +187,7 @@ export const products = [
     name: "Dynam Primo RC Beginner Trainer Red STOL Bigfoot 4S 1450mm w/flaps",
     image: [dynamoPrimo, dynamoPrimo2],
     category: "airplane",
-    price: 25999, // add price if known
+    price: 27999, // add price if known
     specs: {
       wingspan: "1450mm / 57in",
       overallLength: "1014mm / 39.9in",
@@ -214,7 +214,7 @@ export const products = [
     name: "Dynam DNC-2 Beaver V2 Red 4s Sea/Land RC Seaplane 1.5m w/Flap Plus Floats & Rubber Wheel",
     image: [dynamDNC, dynamDNC2],
     category: "airplane",
-    price: 27999, // add price if known
+    price: "Out of Stock", // add price if known
     specs: {
       wingspan: "1500mm / 59in",
       overallLength: "958mm / 37.7in",
@@ -242,7 +242,7 @@ export const products = [
     name: "Dynam Tiger Moth DH. 82 V2 1300mm 4s RC Biplane",
     image: [dynamTiger, dynamTiger2],
     category: "airplane",
-    price: 29999, // add price if known
+    price: 33999, // add price if known
     specs: {
       wingspan: "1270mm / 50in",
       overallLength: "1050mm / 41.3in",
@@ -273,7 +273,7 @@ export const products = [
     name: "Arrows 1300mm BigFoot(PNP RC Plane) Installed vector flight stabilization system",
     image: [arrowBigfoot, arrowBigfoot2],
     category: "airplane",
-    price: 27999, // add price if known
+    price: 29999, // add price if known
     specs: {
       wingspan: "1300mm / 51.1in",
       overallLength: "1060mm / 41.7in",
@@ -327,7 +327,7 @@ export const products = [
     name: "Arrows RC Husky Ultimate 1800mm(6s) with Vector flight stablization system PNP RC Plane",
     image: [arrowHusky, arrowHusky2],
     category: "airplane",
-    price: 37999, // add price if known
+    price: 43999, // add price if known
     specs: {
       wingspan: "1800mm / 71in",
       overallLength: "1200mm / 47in",
@@ -358,7 +358,7 @@ export const products = [
     name: "Arrows Mig-29 2×64mm EDF Jet PNP",
     image: [mig29_1, mig29_2],
     category: "jet",
-    price: 44999, // add price if known
+    price: 51999, // add price if known
     specs: {
       wingspan: "906mm / 35.7in",
       overallLength: "1358mm / 53.5in",
@@ -388,7 +388,7 @@ export const products = [
     name: "Pandora 4-in-1 Red 1400mm PNP",
     image: [pendora1, pendora2],
     category: "airplane",
-    price:29999,
+    price:32999,
     specs: {
       wingspan: "1400mm / 55.1in",
       length: "1180mm / 46.5in",
