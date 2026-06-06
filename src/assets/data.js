@@ -1,5 +1,4 @@
 import xflyImg from "../assets/xfly-model-2100mm.webp";
-import xflyImgTop from "../assets/xfly-model-2100mm-topview.webp";
 import rcEraC129V2Img from "../assets/rcEraC129V2Img.jpg";
 import rcEraC129V2Img2 from "../assets/rcEraC129V2Img2.jpg";
 import fmsRangerGreenImg from "../assets/FMS_Green.jpg";
@@ -33,7 +32,6 @@ import pendora1 from "../assets/FT30121P-1.webp";
 import pendora2 from "../assets/FreewingPendora.jpeg";
 import Aircraftstand1 from "../assets/AircraftStand.png";
 import AircraftStand2 from "../assets/AircraftStand2.jpg";
-import matrix from "../assets/matrix.png";
 import ars300 from "../assets/ARS300.jpeg";
 import scorpion from "../assets/ScorpionV2.webp";
 

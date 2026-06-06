@@ -1,24 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
 import { products } from "../assets/data";
 import { NavLink } from "react-router-dom";
-import { Filter, X, MapPinPlusInside } from "lucide-react";
+import { Filter, MapPinPlusInside } from "lucide-react";
 
-const Products = ({ setProduct }) => {
+const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [showFilters, setShowFilters] = useState(false);
   const [priceRange, setPriceRange] = useState([0, 70000]);
-  const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    document.title = "Fantastic Fleet | Royal Airplanes - Browse Our RC Collection";
+  }, []);
 
   const filteredProducts = products.filter((p) => {
     const matchesCategory =
       selectedCategory === "all" || p.category === selectedCategory;
-    const matchesPrice = p.price >= priceRange[0] && p.price <= priceRange[1];
-    console.log(matchesPrice);
-    const matchesSearch = p.name
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesPrice && matchesSearch;
+    const matchesPrice = typeof p.price === 'number' ? (p.price >= priceRange[0] && p.price <= priceRange[1]) : true;
+    return matchesCategory && matchesPrice;
   });
 
   const handleMinChange = (e) => {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { products } from "../assets/data.js"; // your data file
@@ -7,8 +7,14 @@ const ViewProduct = () => {
   const { id } = useParams();
   const product = products.find((item) => item.id === Number(id));
 
+  useEffect(() => {
+    if (product) {
+      document.title = `${product.name} | Royal Airplanes`;
+    }
+  }, [product]);
+
   const [currentImage, setCurrentImage] = useState(0);
-  const images = Array.isArray(product.image) ? product.image : [product.image];
+  const images = Array.isArray(product?.image) ? product.image : [product?.image];
 
   const nextImage = () => setCurrentImage((prev) => (prev + 1) % images.length);
   const prevImage = () =>
@@ -89,7 +95,7 @@ const ViewProduct = () => {
             {product.name}
           </h1>
           <p className="text-white text-2xl font-semibold bg-linear-to-r from-cyan-400 to-blue-400 rounded-2xl  w-fit  px-4 py-2 mb-6 ">
-            ₹{product.price?.toLocaleString()}
+            {typeof product.price === 'number' ? `₹${product.price.toLocaleString()}` : product.price}
           </p>
           <p className="text-slate-600 leading-relaxed mb-8">
             Experience the thrill of flight with this exceptional RC aircraft.

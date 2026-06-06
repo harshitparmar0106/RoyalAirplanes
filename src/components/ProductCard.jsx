@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 const ProductCard = ({ product, setProduct }) => {
   return (
     <div
-      onClick={() => setProduct(product)}
+      onClick={() => setProduct?.(product)}
       className="group cursor-pointer bg-linear-to-br from-slate-100/50 to-slate-300/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
     >
       <div className="relative overflow-hidden h-94">
@@ -34,7 +34,7 @@ const ProductCard = ({ product, setProduct }) => {
           {product.name}
         </h3>
         <div className="backdrop-blur-3xl bg-gray-200 text-blue-500 px-4 py-2 rounded-full text-sm font-semibold max-w-fit">
-          ₹{product.price.toLocaleString()}
+          {typeof product.price === 'number' ? `₹${product.price.toLocaleString()}` : product.price}
         </div>
         <div className="backdrop-blur-3xl bg-gray-200 text-cyan-500 px-4 py-2 rounded-full text-sm font-semibold mt-4 max-w-fit">
           View Details <ChevronRight className="inline-block w-4 h-4 ml-1" />

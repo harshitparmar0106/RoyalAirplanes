@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X, Phone, Mail, MapPin } from "lucide-react";
 
-const ContactForm = () => {
+const ContactForm = ({ onClose }) => {
   
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
 

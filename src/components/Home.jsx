@@ -1,48 +1,23 @@
 // Home.jsx
 import React, { useState, useEffect } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import { products } from "../assets/data.js";
 import ProductCard from "../components/ProductCard.jsx";
 import FeaturedFleetScroller from "../components/FeaturedFleetScroller.jsx";
 import ProductModal from "../components/ProductModal.jsx";
-import ContactForm from "../components/ContactForm.jsx";
 import { NavLink } from "react-router-dom";
-import HomeImg from "../assets/HomePlane.png"
 
 import {
   Search,
-  Filter,
-  X,
-  Phone,
-  Mail,
-  MapPin,
-  ChevronRight,
-  Plane,
-  Menu,
 } from "lucide-react";
-import Navbar from "./Navbar.jsx";
-import Products from "../pages/Products.jsx";
 import { sliderImages } from "../assets/data.js";
 
 export default function Home() {
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [priceRange, setPriceRange] = useState([0, 50000]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [showFilters, setShowFilters] = useState(false);
-  const [showContact, setShowContact] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenu, setMobileMenu] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    document.title = "Royal Airplanes | Home - Premium RC Aircraft Collection";
     const interval = setInterval(() => {
       setCurrentIndex((prev) =>
         prev === sliderImages.length - 1 ? 0 : prev + 1
@@ -53,13 +28,10 @@ export default function Home() {
   }, []);
 
   const filteredProducts = products.filter((p) => {
-    const matchesCategory =
-      selectedCategory === "all" || p.category === selectedCategory;
-    const matchesPrice = p.price >= priceRange[0] && p.price <= priceRange[1];
     const matchesSearch = p.name
       .toLowerCase()
       .includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesPrice && matchesSearch;
+    return matchesSearch;
   });
 
   return (
@@ -71,7 +43,7 @@ export default function Home() {
             Explore the Art of Flight
           </h1>
           <h2 className="text-2xl text-blue-500 font-medium">
-            Minimal. Modern. Unforgettable.
+            Minimal. Modern. Unforgettable RC Aircraft.
           </h2>
           <button className="mt-6 px-7 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg transition hover:bg-blue-700">
             <NavLink to="/planes">View Collection</NavLink>
@@ -82,7 +54,7 @@ export default function Home() {
             <img
               key={index}
               src={img}
-              alt="Plane"
+              alt={`Premium RC Airplane ${index + 1}`}
               className={`
           absolute inset-0 w-full h-full object-cover transition-opacity duration-700 rounded-2xl
           ${index === currentIndex ? "opacity-100" : "opacity-0"}
@@ -106,6 +78,7 @@ export default function Home() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search planes and helis..."
+              aria-label="Search RC aircraft"
             />
           </div>
         </div>
@@ -113,6 +86,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row gap-8 max-w-6xl w-full px-4 py-4">
           {/* Products Grid */}
           <div className="flex-1 ">
+            <h3 className="sr-only">Our Featured RC Models</h3>
             {filteredProducts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 ">
                 {filteredProducts.map((product) => (

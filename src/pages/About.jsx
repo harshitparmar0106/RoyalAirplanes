@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const About = () => {
+  useEffect(() => {
+    document.title = "About Us | Royal Airplanes - Our Mission and Story";
+  }, []);
+
   return (
-    <section className="min-h-screen pt-54  text-white py-20 px-6 lg:px-24 relative overflow-hidden">z
+    <section className="min-h-screen pt-54  text-white py-20 px-6 lg:px-24 relative overflow-hidden">
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -22,7 +26,7 @@ const About = () => {
           <div>
             <img
               src="https://www.shutterstock.com/image-photo/cheerful-young-man-airline-worker-600nw-1815171710.jpg"
-              alt="RC plane in flight"
+              alt="RC plane enthusiast and hobbyist"
               className="rounded-3xl  shadow-2xl border border-slate-700/50 hover:scale-105 transition-transform duration-700"
             />
             {/* <div className="absolute inset-0 rounded-3xl bg-linear-to-t from-slate-900/50 to-transparent"></div> */}

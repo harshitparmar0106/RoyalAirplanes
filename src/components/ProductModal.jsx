@@ -72,7 +72,7 @@ const ProductModal = ({ product, onClose }) => {
             {product.name}
           </h2>
           <p className="text-blue-700 text-xl font-semibold mb-6 bg-slate-200 rounded-3xl max-w-fit px-4 py-2">
-            ₹{product.price?.toLocaleString()}
+            {typeof product.price === 'number' ? `₹${product.price.toLocaleString()}` : product.price}
           </p>
 
           <h3 className="text-xl md:text-2xl font-bold text-black mb-6 flex items-center">

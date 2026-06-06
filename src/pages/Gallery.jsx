@@ -1,8 +1,11 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
 import { galleryData } from "../assets/data.js";
 
 const Gallery = () => {
+  useEffect(() => {
+    document.title = "Aviation Gallery | Royal Airplanes - Historic Moments in Flight";
+  }, []);
+
   return (
     <div className="min-h-screen bg-linear-to-b from-slate-50 via-sky-100/40 to-blue-50 py-24 px-6 md:px-16 pt-54">
       <div className="text-center mb-16">
@@ -17,12 +20,8 @@ const Gallery = () => {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {galleryData.map((item, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
             className="group relative overflow-hidden rounded-3xl shadow-xl border border-slate-200/50 bg-white/60 backdrop-blur-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
           >
             <div className="overflow-hidden h-64">
@@ -40,7 +39,7 @@ const Gallery = () => {
                 {item.description}
               </p>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 

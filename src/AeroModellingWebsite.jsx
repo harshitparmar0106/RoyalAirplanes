@@ -313,7 +313,7 @@ const AeroModellingWebsite = () => {
   const ProductCard = ({ product }) => (
     <div
       onClick={() => setSelectedProduct(product)}
-      className="group cursor-pointer bg-gradient-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+      className="group cursor-pointer bg-linear-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
     >
       <div className="relative overflow-hidden h-64">
         <img
@@ -321,7 +321,7 @@ const AeroModellingWebsite = () => {
           alt={product.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent opacity-60" />
         <div className="absolute top-4 right-4 bg-cyan-500/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">
           ₹{product.price.toLocaleString()}
         </div>
@@ -343,7 +343,7 @@ const AeroModellingWebsite = () => {
 
   const ProductModal = ({ product, onClose }) => (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fadeIn">
-      <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-slate-700 shadow-2xl">
+      <div className="bg-linear-to-br from-slate-900 to-slate-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-slate-700 shadow-2xl">
         <div className="relative h-96">
           <img
             src={product.image}
@@ -356,7 +356,7 @@ const AeroModellingWebsite = () => {
           >
             <X className="w-6 h-6" />
           </button>
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent p-8">
+          <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-slate-900 via-slate-900/90 to-transparent p-8">
             <h2 className="text-4xl font-bold text-white mb-2">
               {product.name}
             </h2>
@@ -388,7 +388,7 @@ const AeroModellingWebsite = () => {
               setShowContact(true);
               onClose();
             }}
-            className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+            className="w-full bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
           >
             Inquire About This Product
           </button>
@@ -407,7 +407,7 @@ const AeroModellingWebsite = () => {
 
     return (
       <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fadeIn">
-        <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl max-w-2xl w-full border border-slate-700 shadow-2xl p-8">
+        <div className="bg-linear-to-br from-slate-900 to-slate-800 rounded-3xl max-w-2xl w-full border border-slate-700 shadow-2xl p-8">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold text-white">Get In Touch</h2>
             <button
@@ -478,7 +478,7 @@ const AeroModellingWebsite = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+              className="w-full bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
             >
               Send Message
             </button>
@@ -503,7 +503,7 @@ const AeroModellingWebsite = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <style>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(20px); }
@@ -525,7 +525,7 @@ const AeroModellingWebsite = () => {
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <Plane className="w-8 h-8 text-cyan-400" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               AeroWings
             </span>
           </div>
@@ -551,7 +551,7 @@ const AeroModellingWebsite = () => {
           </nav>
           <button
             onClick={() => setShowContact(true)}
-            className="hidden md:block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+            className="hidden md:block bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
           >
             Get In Touch
           </button>
@@ -593,7 +593,7 @@ const AeroModellingWebsite = () => {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10" />
+        <div className="absolute inset-0 bg-linear-to-br from-cyan-500/10 via-transparent to-blue-500/10" />
         <div
           className="absolute inset-0"
           style={{
@@ -604,7 +604,7 @@ const AeroModellingWebsite = () => {
         />
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fadeIn">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Elevate Your Flight
             </span>
           </h1>
@@ -620,7 +620,7 @@ const AeroModellingWebsite = () => {
           >
             <a
               href="#products"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+              className="bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
             >
               Explore Collection
             </a>
@@ -638,7 +638,7 @@ const AeroModellingWebsite = () => {
       <section id="products" className="py-20 px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-5xl font-bold mb-4 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Our Collection
             </h2>
             <p className="text-slate-400 text-lg">
@@ -685,7 +685,7 @@ const AeroModellingWebsite = () => {
                       onClick={() => setSelectedCategory(cat)}
                       className={`w-full text-left px-4 py-3 rounded-xl transition-all ${
                         selectedCategory === cat
-                          ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/30'
+                          ? 'bg-linear-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/30'
                           : 'bg-slate-700/30 text-slate-300 hover:bg-slate-700/50'
                       }`}
                     >
@@ -756,7 +756,7 @@ const AeroModellingWebsite = () => {
         <div className="container mx-auto max-w-7xl text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
             <Plane className="w-8 h-8 text-cyan-400" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               AeroWings
             </span>
           </div>

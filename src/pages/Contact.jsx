@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Mail, MessageCircleMore} from "lucide-react";
 
 export default function ContactPage() {
+  useEffect(() => {
+    document.title = "Contact Us | Royal Airplanes - Get in Touch for RC Aircraft Queries";
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
